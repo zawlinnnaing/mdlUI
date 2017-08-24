@@ -38,3 +38,19 @@ Route::get('/announcements/delete/{id}','anouncementController@delete')->name('a
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/academic', 'HomeController@academic');
+Route::get('/about', 'HomeController@about');
+
+Route::get('/departments/archi', 'HomeController@archi');
+Route::get('/departments/ceit', 'HomeController@ceit');
+Route::get('/departments/che', 'HomeController@che');
+Route::get('/departments/civil', 'HomeController@civil');
+Route::get('/departments/ec', 'HomeController@ec');
+Route::get('/departments/eng', 'HomeController@eng');
+Route::get('/departments/ep', 'HomeController@ep');
+Route::get('/departments/ir', 'HomeController@ir');
+Route::get('/departments/maths', 'HomeController@maths');
+Route::get('/departments/mech', 'HomeController@mech');
+Route::get('/departments/mecha', 'HomeController@mecha');
+Route::get('/departments/myan', 'HomeController@myan');
+

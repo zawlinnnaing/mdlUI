@@ -6,14 +6,16 @@ use Session;
 use Illuminate\Http\Request;
 use App\Post;
 use App\Photos;
+use App\Announcement;
 use Illuminate\Support\Facades\Storage;
 
 class postsController extends Controller
 {
   public function index(){
     $posts=Post::orderBy('created_at','desc')->limit(4)->get();
+    $announcements = Announcement::orderBy('created_at','desc')->get();
     $photos=Photos::orderBy('id','desc')->get();
-    return view('index',['posts'=> $posts],['photos' => $photos]);
+    return view('index',['posts'=> $posts],['photos' => $photos,'announcements' => $announcements]);
   }
 
   public function details($id){
@@ -26,7 +28,7 @@ class postsController extends Controller
   }
 
   public function  insert(Request $request){
-    $this->validate($request,['title'=>'required','content' => 'required']);
+    $this->validate($request,['title'=>'required','content' => 'required','publisher' => 'required']);
     $postData=$request->all();
     Post::create($postData);
     Session::flash('success_msg','Post added Successfully');

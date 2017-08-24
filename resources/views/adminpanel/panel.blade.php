@@ -29,13 +29,19 @@
                                         <div class="form-group row">
                                             <label class="col-md-3 form-control-label" for="text-input">Title</label>
                                             <div class="col-md-9">
-                                                <input type="text" id="title" name="text-input" class="form-control" placeholder="Text">
+                                                <input type="text" id="title" name="title" class="form-control" placeholder="Text">
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-md-3 form-control-label" for="textarea-input">Textarea</label>
                                             <div class="col-md-9">
-                                                <textarea id="content" name="textarea-input" rows="9" class="form-control" placeholder="Content.."></textarea>
+                                                <textarea id="content" name="content" rows="9" class="form-control" placeholder="Content.."></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 form-control-label" for="text-input">Publisher</label>
+                                            <div class="col-md-9">
+                                                <input type="text" id="publisher" name="publisher" class="form-control" placeholder="Text">
                                             </div>
                                         </div>
                                         {{-- <div class="form-group row">
@@ -73,7 +79,9 @@
 
                 $('#post_submit').click(function(e){
                     e.preventDefault();
-                    $.post('/posts/insert',{ title : 'sa', content : 'asdf', publisher : 'me'});
+                    $.post('/posts/insert',{ _token: '{{ csrf_token() }}',title : $('#title').val() , content: $('#content').val() , publisher: $('#publisher').val() });
+
+                    console.log( $('#title').val() );
                 });
 @endsection
 

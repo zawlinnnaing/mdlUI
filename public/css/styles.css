@@ -15,8 +15,7 @@
  */
 
 body {
-  margin: 0;
-}
+  margin: 0;}
 
 /* Disable ugly boxes around images in IE10 */
 a img{
@@ -425,7 +424,7 @@ a img{
 
 .footer {
   background-color: #fafafa;
-  position: relative;
+  position: relative;s
 }
 
   .footer a:hover {
@@ -450,7 +449,7 @@ a img{
 
   .footer .mdl-mega-footer--right-section a .material-icons {
     position: relative;
-    top: 6px;
+    /*top: 6px;*/
   }
 
 
@@ -473,7 +472,7 @@ a img{
     display: none;
   }
 
-  .title {
+  #title {
     display: none !important;
   }
 
@@ -481,7 +480,7 @@ a img{
     display: block !important;
     position: absolute;
     /*left: calc(50% - 70px);*/
-    font-size: 1.2em;
+    font-size: 1rem;
     color: #757575;
     transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -507,7 +506,7 @@ a img{
   }
 
   .be-together-section {
-    height: 380px;
+    height: 480px;
   }
 
   .slogan {
