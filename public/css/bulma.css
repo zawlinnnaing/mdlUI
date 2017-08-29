@@ -112,7 +112,7 @@ html {
   -webkit-font-smoothing: antialiased;
   min-width: 300px;
   overflow-x: hidden;
-  overflow-y: scroll;
+  /*overflow-y: scroll;*/
   text-rendering: optimizeLegibility;
 }
 
@@ -2660,7 +2660,7 @@ input[type="submit"].button {
 }
 
 .icon .fa {
-  font-size: 21px;
+  /*font-size: 21px;*/
 }
 
 .icon.is-small {
@@ -7158,6 +7158,6 @@ label.panel-block:hover {
 
 .footer {
   background-color: whitesmoke;
-  padding: 3rem 1.5rem 6rem;
+  padding: 3rem 1.5rem 3rem;
 }
 /*# sourceMappingURL=bulma.css.map */

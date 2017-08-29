@@ -9,18 +9,27 @@
                 </div>
             </div>
             <div class="wear-section" style="position: relative;
-              background: url('/../images/sport.jpg') center 100% no-repeat;
+                @if($posts[0]->photos->toArray() == null)
+                background: url('/../images/sport.jpg') center 100% no-repeat;
+                @else 
+                    @foreach($photos as $photo) @if($photo->forshow == 1 && $photo->post_id == $posts[0]->id )
+                        background: url({{ 'uploads/'.$photo->img_dir }}) center 100% no-repeat;
+                        @endif 
+                    @endforeach 
+                @endif
+              
               background-size: cover;
               height: 450px;">
+                <div style="padding: 20px;"><h1 style="color: #ddd; opacity: 0.9;">Upcoming Event</h1></div>
                 <div class="wear-band">
                     <div class="wear-band-text">
-                        <div class="mdl-typography--font-thin">The best of Google built in</div>
+                        <div class="mdl-typography--font-thin">{{$posts[0]->title}}</div>
                         <p class="mdl-typography--font-thin">
-                            Android works perfectly with your favourite apps like Google Maps, Calendar and YouTube.
+                            {{implode(' ', array_slice(str_word_count($posts[0]->content, 2), 0, 20))}}
                         </p>
                         <p>
                             <a class="mdl-typography--font-regular mdl-typography--text-uppercase alt-link" href="">
-                  See what's new in the Play Store&nbsp;<i class="material-icons">chevron_right</i>
+                  See Detail&nbsp;<i class="material-icons">chevron_right</i>
                 </a>
                         </p>
                     </div>
@@ -35,13 +44,12 @@
                             <hr>
                     @endforeach
                 </div>
-                <div class="customized-section-image"></div>
             </div>
             <div class="more-section">
-                <div class="section-title mdl-typography--display-1-color-contrast">More from Android</div>
+                <div class="section-title mdl-typography--display-1-color-contrast">Previous Events</div>
                 <div class="card-container mdl-grid">
                     @foreach($posts as $post)
-                    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+                    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--0dp" style="margin: 20px auto;  border: 1px solid #ddd;">
                         <div class="mdl-card__media">
                             @if($post->photos->toArray() == null)
                             <img src="images/serveimage.gif"> @else @foreach($photos as $photo) @if($photo->forshow == 1 && $photo->post_id == $post->id )

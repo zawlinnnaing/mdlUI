@@ -7,7 +7,7 @@
                     <div class="row">
                         @foreach($posts as $post)
                             <div class="col-sm-6 col-md-4">
-                                <div class="card">
+                                <div class="card" id="{{ $post->id }}">
                                     <div class="card-header">
                                         {{ $post->title }}
                                         <span class="float-right"><i class="fa fa-pencil-square-o" aria-hidden="true" post_id="{{$post->id}}" style="text-align: center; vertical-align: middle;"></i>
@@ -72,8 +72,10 @@
 
                 $('.fa-trash-o').click(function(e){
                     e.preventDefault();
-                    $.get('/posts/delete/'+$(this).attr('post_id'),function(){
-                        $(this).remove();
+                    var id = $(this).attr('post_id');
+                    $.get('/posts/delete/'+id,function(){
+                        $('#'+id).remove();
+                        $('.row').css("height", "auto");
                     });
                 });
 

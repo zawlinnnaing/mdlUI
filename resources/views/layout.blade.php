@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{ asset('css/material.css') }}">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/bulma.css')}}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
     #title{
         color: grey;
@@ -83,16 +84,15 @@
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/about">About</a>
             </nav>
         </div>
-        <div class="content mdl-layout__content">
+        <div class="content mdl-layout__content" style="margin: 0;">
             @yield('content')
             <footer class="footer mdl-mega-footer">
                 <div class="mdl-mega-footer--top-section">
                     <div class="mdl-mega-footer--left-section">
-                        <button class="mdl-mega-footer--social-btn"></button>
+                        <a href="#" class="fa fa-facebook"></a>
                         &nbsp;
-                        <button class="mdl-mega-footer--social-btn"></button>
+                        <a href="#" class="fa fa-twitter"></a>
                         &nbsp;
-                        <button class="mdl-mega-footer--social-btn"></button>
                     </div>
                     <div class="mdl-mega-footer--right-section">
                         <a class="mdl-typography--font-light" href="#top">
@@ -133,6 +133,8 @@
         </div>
     </div>
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{asset('js/index.js')}}"></script>
 </body>
 
 </html>
