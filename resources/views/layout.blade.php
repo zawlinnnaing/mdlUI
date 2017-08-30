@@ -7,13 +7,14 @@
     <meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>Mandalay Technological University</title>
-    <!-- Page styles -->
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="{{ asset('css/material.css') }}">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/bulma.css')}}">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    @yield('stylelink')
     <style>
     #title{
         color: grey;
@@ -45,7 +46,7 @@
                     <nav class="navigation mdl-navigation">
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/departments/civil">Departments</a>
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/academic">Acedamic Plan</a>
-                        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Activities</a>
+                        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/postList">Activities</a>
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Research</a>
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Alumini</a>
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/about">About</a>
@@ -135,6 +136,7 @@
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="{{asset('js/index.js')}}"></script>
+    @yield('scrtag')
 </body>
 
 </html>

@@ -40,6 +40,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/academic', 'HomeController@academic');
 Route::get('/about', 'HomeController@about');
+Route::get('/postList','HomeController@postList');
+Route::get('/post/{id}','HomeController@post');
 
 Route::get('/departments/archi', 'HomeController@archi');
 Route::get('/departments/ceit', 'HomeController@ceit');
