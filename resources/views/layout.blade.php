@@ -14,12 +14,9 @@
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
      <link rel="stylesheet" type="text/css" href="{{asset('css/bulma.css')}}">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<<<<<<< HEAD
     <!--<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> -->
 
-=======
     @yield('stylelink')
->>>>>>> 77cd98f866323e460efab63fa09baa1d26eaf798
     <style>
     #title{
         color: grey;
@@ -52,13 +49,8 @@
                     <nav class="navigation mdl-navigation">
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/departments/civil">Departments</a>
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/academic">Acedamic Plan</a>
-<<<<<<< HEAD
-                        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Activities</a>
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/research">Research</a>
-=======
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/postList">Activities</a>
-                        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Research</a>
->>>>>>> 77cd98f866323e460efab63fa09baa1d26eaf798
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Alumini</a>
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/about">About</a>
                     </nav>
