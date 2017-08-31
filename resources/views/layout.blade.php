@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="{{ asset('css/material.css') }}">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/bulma.css')}}">
+     <link rel="stylesheet" type="text/css" href="{{asset('css/bulma.css')}}">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> -->
+
     <style>
     #title{
         color: grey;
@@ -28,6 +30,7 @@
         z-index: 900;
     }
     </style>
+    @yield('style')
 </head>
 
 <body>
@@ -46,7 +49,7 @@
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/departments/civil">Departments</a>
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/academic">Acedamic Plan</a>
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Activities</a>
-                        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Research</a>
+                        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/research">Research</a>
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Alumini</a>
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/about">About</a>
                     </nav>
@@ -86,6 +89,7 @@
         </div>
         <div class="content mdl-layout__content" style="margin: 0;">
             @yield('content')
+
             <footer class="footer mdl-mega-footer">
                 <div class="mdl-mega-footer--top-section">
                     <div class="mdl-mega-footer--left-section">
@@ -132,9 +136,10 @@
             </footer>
         </div>
     </div>
-    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="{{asset('js/index.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+   <!-- <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
 </body>
 
 </html>

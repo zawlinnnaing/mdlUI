@@ -53,4 +53,5 @@ Route::get('/departments/maths', 'HomeController@maths');
 Route::get('/departments/mech', 'HomeController@mech');
 Route::get('/departments/mecha', 'HomeController@mecha');
 Route::get('/departments/myan', 'HomeController@myan');
+Route::get('/research','HomeController@research');
 

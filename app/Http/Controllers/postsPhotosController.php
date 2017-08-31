@@ -25,14 +25,26 @@ class postsPhotosController extends Controller
   }
 
   public function  insert(Request $request){
-    $this->validate($request,['file'=>'image|mimes:jpeg,jpg,bmp,png|max:2000','name' => 'required','post_id' => 'required']);
-    $file = $request->file;
-    $file->move('uploads',$file->getClientOriginalName());
+    $requestFile = $request->all();
+ 
+    $this->validate($request , ['name' => 'required' , 'post_id' => 'required']);
+    
+    $files = $request->file('file');
+   // $file = count($request->input('file'));
+
+    foreach($files as $index){
+
+    $rules = ['file' => 'required|mimes:png,jpeg,jpg,gif|max:2048'];
+    $Validator = Validator::make($requestFile,$rules);
+
+    $index->move('uploads',$index->getClientOriginalName());
     Photos::create([
-                'img_dir' => $file->getClientOriginalName(),
+                'img_dir' => $index->getClientOriginalName(),
                 'name' => $request->name,
                 'post_id' => $request->post_id
             ]);
+    }
+
     Session::flash('success_msg','Photo added Successfully');
     return redirect()->route('photos.index');
   }
