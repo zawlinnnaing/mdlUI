@@ -44,13 +44,21 @@
                                                 <input type="text" id="publisher" name="publisher" class="form-control" placeholder="Text">
                                             </div>
                                         </div>
-                                        {{-- <div class="form-group row">
+                                         <div class="form-group row">
                                             <label class="col-md-3 form-control-label" for="file-multiple-input">Multiple File input</label>
                                             <div class="col-md-9">
-                                                <input type="file" id="file-multiple-input" name="file-multiple-input" multiple="">
+                                                <input type="file" id="file-multiple-input" name="file[]" multiple>
                                             </div>
-                                        </div> --}}
-                                    </form>
+                                        </div> 
+                                        <div class="form-group row">
+                                            <label class="col-md-3 form-control-label" for="text-input">Photo Name</label>
+                                            <div class="col-md-9">
+                                                <input type="text" id="photoName" name="name" class="form-control" placeholder="Text">
+                                            </div>
+                                        </div>
+
+
+                                                                            </form>
                                 </div>
                                 <div class="card-footer">
                                     <button type="submit" id="post_submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
@@ -69,10 +77,11 @@
 @endsection
 
 @section('script')
-
+            
+             var id = $(this).attr('post_id');
                 $('.fa-trash-o').click(function(e){
                     e.preventDefault();
-                    var id = $(this).attr('post_id');
+                    //var id = $(this).attr('post_id');
                     $.get('/posts/delete/'+id,function(){
                         $('#'+id).remove();
                         $('.row').css("height", "auto");
@@ -81,8 +90,9 @@
 
                 $('#post_submit').click(function(e){
                     e.preventDefault();
+                    var files = $('input[type=file]').files;
                     $.post('/posts/insert',{ _token: '{{ csrf_token() }}',title : $('#title').val() , content: $('#content').val() , publisher: $('#publisher').val() });
-
+                    $.post('photos/insert',{ _token: '{{csrf_token()}}',name : $('#photoName').val(), post_id: id , file: files});
                     console.log( $('#title').val() );
                 });
 @endsection
