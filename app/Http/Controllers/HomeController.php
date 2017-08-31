@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
+use App\Photos;
 
 class HomeController extends Controller
 {
@@ -92,5 +94,17 @@ class HomeController extends Controller
      public function myan()
     {
             return view('departments.myan');
+    }
+    public function postList(){
+        $posts = Post::orderBy('created_at' , 'desc')->simplePaginate(8);
+        $pageCount = $posts->count();
+        $photos=Photos::orderBy('id','desc')->get();
+        $posts->withPath('postList');
+        return view('postList' , array('posts' => $posts , 'pageCount' => $pageCount , 'photos' => $photos));
+    }
+    public function post($id){
+        $post=Post::find($id);
+        $photos=Photos::where('post_id',$id)->get();
+        return view('post', ['post' => $post,'photos' => $photos]);
     }
 }

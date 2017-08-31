@@ -14,8 +14,10 @@
  * limitations under the License.
  */
 body ,html{
+  overflow: hidden;
   margin: 0;
-  min-width: 100%;
+  padding: 0;
+  width: 100%;
 }
 
 /* Disable ugly boxes around images in IE10 */
@@ -111,7 +113,7 @@ a img{
 
   .navigation .mdl-navigation__link {
     display: inline-block;
-    height: 60px;
+    height: 64px;
     line-height: 68px;
     background-color: transparent !important;
     border-bottom: 4px solid transparent;
@@ -467,12 +469,18 @@ a img{
             font-weight: bold;
             color: #3273dc;
 }
+.sy-box{
+  height: 450px;
+}
+
 /**** Mobile layout ****/
 @media (max-width: 900px) {
   .navigation-container {
     display: none;
   }
-
+  .sy-box{
+  height: 200px;
+  }
   #title {
     display: none !important;
   }
@@ -570,4 +578,8 @@ a img{
  .fa-twitter {
     background: #4AB3F4;
     color: white;
+}
+
+.full-width{
+  width: 100% !important;
 }

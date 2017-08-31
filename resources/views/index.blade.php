@@ -62,7 +62,7 @@
                             <span class="mdl-typography--font-light mdl-typography--subhead">{{implode(' ', array_slice(str_word_count($post->content, 2), 0, 20))}}</span>
                         </div>
                         <div class="mdl-card__actions">
-                            <a class="link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+                            <a class="link mdl-button mdl-js-button mdl-typography--text-uppercase" href="/post/{{ $post->id }}">
                    Make the switch
                    <i class="material-icons">chevron_right</i>
                  </a>

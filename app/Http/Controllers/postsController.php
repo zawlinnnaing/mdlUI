@@ -15,7 +15,7 @@ class postsController extends Controller
     $posts=Post::orderBy('created_at','desc')->limit(4)->get();
     $announcements = Announcement::orderBy('created_at','desc')->get();
     $photos=Photos::orderBy('id','desc')->get();
-    return view('index',['posts'=> $posts],['photos' => $photos,'announcements' => $announcements]);
+    return view('index',['posts'=> $posts ,'photos' => $photos,'announcements' => $announcements]);
   }
 
   public function details($id){
