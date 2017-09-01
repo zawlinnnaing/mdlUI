@@ -104,7 +104,7 @@ LOCAL PRODUCT CEMENT (SIN MINN  and AAA)
 <!------------------------------ Mobile Version ------------------------- -->
 <div class="container is-hidden-desktop is-hidden-table" style="margin : 2rem !important">
 
-  		<ul class="collapsible" data-collapsible="accordion">
+  		<ul class="collapsible" data-collapsible="expandable">
     <li>
       <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
       <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
