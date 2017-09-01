@@ -29,12 +29,13 @@
 		<h4 class="title is-4">Research Facilities</h4>
 		<p>The Department aims at research which addresses technological problems in the country and promotes joint international research./p>
 		<ol>
-		<li>1000W Modified Sine Wave Inverter Design (2009/2010)</li> 
+		<li><a href="https://drive.google.com/open?id=0BwmvIpDxrAvgN1p3aGdiVXJCNlU" target="_blank">1000W Modified Sine Wave Inverter Design (2009/2010)</a></li> 
 		<li>Performance Evaluation and Control System of Micro Quardrotor for UAV (2010/2011) </li>
-		<li>mplementation of e-Medical Education and e-Health Care System Based on Heterogeneous Wireless Network (2011/2012)
-</li>
-		<li>Smart Faculty Design (2012/2013)</li>
-		<li>Wireless Weather Station (2012/2013)</li>
+			<li><a href="https://drive.google.com/open?id=0BwmvIpDxrAvgZXZIOWMwdzA2OVk" target="_blank">Implementation of e-Medical Education and e-Health Care System Based on Heterogeneous Wireless Network 
+			</a></li>
+					<li>
+					<a href="https://drive.google.com/open?id=0BwmvIpDxrAvgVXJ0d1BhV3h6REU" target="_blank">Smart Faculty Design (2012/2013)</a></li>
+		<li><a href="https://drive.google.com/open?id=0BwmvIpDxrAvgMElaX2RjZk9mX0k" target="_blank">Wireless Weather Station (2012/2013)</a></li>
 		<li>Control System Design and Stability Analysis of Quardrotor (2013/2014)</li>
 
 		</ol>

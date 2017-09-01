@@ -29,33 +29,48 @@
 		<h4 class="title is-4">Previous Researches</h4>
 		<ol>
 			<li>
+			<a href="https://drive.google.com/open?id=0BwmvIpDxrAvgMm0zdF92dkpaMEU" target="_blank">
 				Proposed Advisory Stillwater Depth in Ayeyarwady Coastal Region and Sensitivity of Flood Load Effect on Reinforced Concrete Buildings
+				</a>
 			</li>
 			<li>
+				<a href="https://drive.google.com/open?id=0BwmvIpDxrAvgQnZRMkF0UEV1Sk0" target="_blank">
 				Experimental Research on Properties of Concrete
  				using Regionalized Aggregates and Local Product Cement 
 				(Sin Minn  & AAA)
+				</a>
 			</li>
-			<li>
+			<li><a href="https://drive.google.com/open?id=0BwmvIpDxrAvgYndIaEplX1hQTGc" target="_blank">
 				Municipal Solid Waste Management System for Mandalay City
+				</a>
 			</li>
 		</ol>
 		<h2 class="title is-4">Current Doing Researches</h2>
 		<ol>
 			<li>
+			<a href="https://drive.google.com/open?id=0BwmvIpDxrAvgcVhIUS03UmYxa0E" target="_blank">
 				Investigation on Problems and Challenges in  Paunglaung Dams Assessment
+				</a>
 			</li>
 			<li>
+			<a href="https://drive.google.com/open?id=0BwmvIpDxrAvgb0Z0M0JrSTFwUlU" target="_blank">
 				Study on Flash Flood in Daungnay Ungaged Watershed
+				</a>
 			</li>
 			<li>
+			<a href="https://drive.google.com/open?id=0BwmvIpDxrAvgbl9oejhGSF9ycU0" target="_blank">
 				Study on the Causes and Effects of Bank Erosion in Ayeyarwaddy River Reach (Mandalay Area) 
+				</a>
 			</li>
 			<li>
+			<a href="https://drive.google.com/open?id=0BwmvIpDxrAvgQkoyWXFTY3ZRNXc" target="_blank">
 				Developing Flood Risk Mapping for Ayeyarwaddy River Basin  in Delta Region
+				</a>
 			</li>
 			<li>
+				<a href="https://drive.google.com/open?id=0BwmvIpDxrAvgQ19RVFdLeXBxbVk" target="_blank">
 				Analysis of the Performance of the Various Calculation Methods for Evapotranspiration(Et<sub>0</sub> )
+				</a>
 			</li>
 		</ol>
 	</div>
