@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> -->
 
-    @yield('stylelink')
+   
     <style>
     #title{
         color: grey;
@@ -139,7 +139,6 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="{{asset('js/index.js')}}"></script>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
    <!-- <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
     @yield('scrtag')
 </body>
