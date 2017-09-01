@@ -21,6 +21,7 @@ Route::get('/posts/edit/{id}','postsController@edit')->name('posts.edit');
 Route::post('/posts/update/{id}','postsController@update')->name('posts.update');
 Route::get('/posts/delete/{id}','postsController@delete')->name('posts.delete');
 
+Route::post('/post&photos/insert', 'postsPhotosController@insert');
 
 Route::get('/photos','postsPhotosController@index')->name('photos.index');
 Route::get('/photos/details/{id}','postsPhotosController@details')->name('photos.details');

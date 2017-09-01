@@ -25,14 +25,28 @@ class postsPhotosController extends Controller
   }
 
   public function  insert(Request $request){
-    $this->validate($request,['file'=>'image|mimes:jpeg,jpg,bmp,png|max:2000','name' => 'required','post_id' => 'required']);
-    $file = $request->file;
-    $file->move('uploads',$file->getClientOriginalName());
-    Photos::create([
-                'img_dir' => $file->getClientOriginalName(),
-                'name' => $request->name,
-                'post_id' => $request->post_id
+    // $this->validate($request);
+    // $file = $request->file;
+    // $file->move('uploads',$file->getClientOriginalName());
+    // Photos::create([
+    //             'img_dir' => $file->getClientOriginalName(),
+    //             'name' => $request->name,
+    //             'post_id' => $request->post_id
+    //         ]);
+
+    $post = Post::create([
+                'title' => $request->title,
+                'content' => $request->content,
+                'publisher' => $request->publisher
             ]);
+    foreach ($request->ary as $img) {
+            $img->move('uploads',$img->getClientOriginalName());
+            Photos::create([
+                'img_dir' => $img->getClientOriginalName(),
+                'name' => $img->getClientOriginalName(),
+                'post_id' => 3
+            ]);
+        }
     Session::flash('success_msg','Photo added Successfully');
     return redirect()->route('photos.index');
   }
