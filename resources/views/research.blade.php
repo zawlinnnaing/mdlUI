@@ -104,7 +104,21 @@ LOCAL PRODUCT CEMENT (SIN MINN  and AAA)
 <!------------------------------ Mobile Version ------------------------- -->
 <div class="container is-hidden-desktop is-hidden-table" style="margin : 2rem !important">
 
-  
+  		<ul class="collapsible" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+  </ul>
+
 <details>
 	<summary>Civil Engineering</summary>
 	<div class="res-content">
@@ -195,6 +209,8 @@ LOCAL PRODUCT CEMENT (SIN MINN  and AAA)
 		<a href="https://drive.google.com/open?id=0BwmvIpDxrAvgc2k0d01FZmk4a1E" target="_blank">  Researches of physics</a>
 		</div>
 	</details>
+
+
 
   </div>
 
