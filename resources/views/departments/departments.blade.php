@@ -115,16 +115,16 @@ div.panel {
     i{
         display: inline !important;
     }
-    @keyframes slideInFromTop{
+    @keyframes slideInFromLeft{
   0% {
-    transform: translateY(-100%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
     .content {
-        animation: 1s ease-out 0s 1 slideInFromTop;
+        animation: 1s ease-out 0s 1 slideInFromLeft;
     }
     .courses{
         margin: 2rem 0 ;
