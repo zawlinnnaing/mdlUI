@@ -7,21 +7,36 @@
 	<p>
 		The Department of Architecture is located in Mandalay Technological University. There are permanently four teachers and eleven Honorable Prof. The heads of Department and all teachers try their best and their pupils to become good Architects. So, the pride of Architecture Department is sweet-smelling. Moreover, the gratitude of the former heads of the Department is also immemorial.
 	</p>
-	<h4 class="title is-4">Mission & Vission</h4>
-		<ol>
+
+		<button class="accordion" onmouseover="collpaseOnHover(this)">Mission 
+</button>
+<div class="panel">	
+	<ol>
 			<li>Participation in Documentation of Shwe Nandaw Kyaung (Golden Palace Monastery) conservation project in Mandalay collaborated with Ministry of Culture.</li>
 			<li>Data Collection Project of Future Zoning Plan Of Mandalay collaborated with Mandalay City Development Committee.</li>
 			<li>Planning for mapping in ancient Pyu cities projects by application of Geographic information system (GIS).</li>
 		</ol>
+</div>
+			<button class="accordion" onmouseover="collpaseOnHover(this)">Vision</button>
+<div class="panel">	
 		<ol>
 			<li>Water front development in Mandalay City</li>
 			<li>Defining Urban built Heritage in Mandalay City</li>
 			<li>Streetscape Development in Mandalay City</li>
 			<li>Urban development in historic city, case study; Mandalay City</li>
 		</ol>
-	<h4 class="title is-4">History of Depardment</h4>
+</div>
+
+	<div class="history">
+	<div class="history-header">
+	<h4 class="title is-4" style="text-align: center;">History of Department	<i class="fa fa-history" aria-hidden="true"></i>
+</h4>
+	</div>
 	<p>The Department of Architecture was inaugurated in 1993. The department is temporally closed from December, 2011 to Nov, 2012 and reopened in December, 2012 in Mandalay Technological University. Up to now 2014, Department of Architecture has produced over hundred promising Architects in ten years duration (i.e. 1993-2003). The first post graduate in Master of Architecture from the Mandalay Technological was offered into the profession in 2004, and seven nos. of Master Degree holders have been produced up to 2010. The first doctorate in Ph. D in Architecture & Planning passed out into the profession in year 2006, eleven in 2007, nineteen in 2008, and one in 2010, three in 2011; altogether 34 nos. of Ph.D holders.
 	</p>
+	</div>
+
+	<div class="courses">
 	<h4 class="title is-4">Courses</h4>
 		<p>
 			In theDepartment of Information Technology, three types of programs are offered. They are 
@@ -32,6 +47,7 @@
 			<li>Doctoral degree (Three-Year Program)</li>
 
 		</ol>
+		</div>
 		<h4  class="title is-4">Research Facilities</h4>
 		<p>	
 			To ensure that our undergraduate and graduate programs are qualified, the following facilities that have been assembled:
