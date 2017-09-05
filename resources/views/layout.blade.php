@@ -53,7 +53,11 @@
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/academic">Acedamic Plan</a>
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/research">Research</a>
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/postList">Activities</a>
+<<<<<<< HEAD
+                        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/research">Research</a>
+=======
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Alumini</a>
+>>>>>>> cff7ca6fd2b7ef572a3020f5615154bd9a8590d2
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/about">About</a>
                     </nav>
                 </div>
@@ -86,7 +90,6 @@
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/academic">Acedamic Plan</a>
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Activities</a>
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Research</a>
-                        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Alumini</a>
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/about">About</a>
             </nav>
         </div>

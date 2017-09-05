@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Announcement;
 
 class adminpanelController extends Controller
 {
@@ -20,6 +21,7 @@ class adminpanelController extends Controller
     public function index()
     {
     		$posts=Post::orderBy('created_at','desc')->get();
-      	return view('adminpanel.panel',['posts'=> $posts]);
+            $announcements=Announcement::orderBy('created_at','desc')->get();
+      	    return view('adminpanel.panel',['posts'=> $posts],['announcements'=>$announcements]);
     }
 }

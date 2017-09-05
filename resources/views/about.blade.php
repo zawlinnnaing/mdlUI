@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-	<div class="columns">
+	<div class="columns" style="margin: 0;">
 		<div class="column is-8 container content"> 
 			<h3 class="title is-3">Vision</h3>
 			<p>It is envisaged that MTU will become a highly-prestigious technological centre of excellence in engineering education, research and the application of knowledge to benefit society globally and train students of high caliber to become highly-qualified engineers, specialists with the ability to create knowledge and solve complex real-world problems and researchers who can discover and innovate new things, all for the good of society, mankind and environment.</p>

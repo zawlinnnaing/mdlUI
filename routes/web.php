@@ -21,6 +21,7 @@ Route::get('/posts/edit/{id}','postsController@edit')->name('posts.edit');
 Route::post('/posts/update/{id}','postsController@update')->name('posts.update');
 Route::get('/posts/delete/{id}','postsController@delete')->name('posts.delete');
 
+Route::post('/post&photos/insert', 'postsPhotosController@insertboth');
 
 Route::get('/photos','postsPhotosController@index')->name('photos.index');
 Route::get('/photos/details/{id}','postsPhotosController@details')->name('photos.details');
@@ -28,7 +29,7 @@ Route::get('/photos/add', 'postsPhotosController@add')->name('photos.add');
 Route::any('/photos/insert','postsPhotosController@insert')->name('photos.insert');
 Route::get('/photos/edit/{id}','postsPhotosController@edit')->name('photos.edit');
 Route::post('/photos/update/{id}','postsPhotosController@update')->name('photos.update');
-Route::get('/photos/delete/{id}','postsPhotosController@delete')->name('photos.delete');
+Route::post('/photos/delete','postsPhotosController@delete')->name('photos.delete');
 
 Route::get('/announcements','anouncementController@index')->name('announcements.index');
 Route::get('/announcements/add', 'anouncementController@add')->name('announcements.add');
@@ -42,6 +43,7 @@ Route::get('/academic', 'HomeController@academic');
 Route::get('/about', 'HomeController@about');
 Route::get('/postList','HomeController@postList');
 Route::get('/post/{id}','HomeController@post');
+Route::get('/research', 'HomeController@research');
 
 Route::get('/departments/archi', 'HomeController@archi');
 Route::get('/departments/ceit', 'HomeController@ceit');
@@ -57,3 +59,7 @@ Route::get('/departments/mecha', 'HomeController@mecha');
 Route::get('/departments/myan', 'HomeController@myan');
 Route::get('/research','HomeController@research');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
