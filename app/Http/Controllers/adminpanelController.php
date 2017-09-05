@@ -22,6 +22,6 @@ class adminpanelController extends Controller
     {
     		$posts=Post::orderBy('created_at','desc')->get();
             $announcements=Announcement::orderBy('created_at','desc')->get();
-      	return view('adminpanel.panel',['posts'=> $posts],['announcements'=>$announcements]);
+      	    return view('adminpanel.panel',['posts'=> $posts],['announcements'=>$announcements]);
     }
 }

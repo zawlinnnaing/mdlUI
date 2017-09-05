@@ -1,4 +1,5 @@
-@extends('adminpanel.layout') @section('content')
+@extends('adminpanel.layout') 
+@section('content')
 <div class="container-fluid">
     <div class="animated fadeIn" id="posts">
         <div class="row">
@@ -16,8 +17,9 @@
                     </div>
                 </div>
             </div>
-            @endforeach
+            @endforeach     
         </div>
+
     </div>
     <div class="animated fadeIn" id="announcements" style="display: none;">
         <div class="row">
@@ -37,6 +39,7 @@
             @endforeach
         </div>
     </div>
+
     <div class="card col-md-9" id="posts_form" style="display: none;">
         <div class="card-body">
             <form action="" method="post" id="post_form_data" name="post_form_data" enctype="multipart/form-data" class="form-horizontal">
@@ -59,12 +62,8 @@
                         <input type="text" id="publisher" name="publisher" class="form-control" placeholder="Text">
                     </div>
                 </div>
-                <div class="form-group row">
-                    <label class="col-md-3 form-control-label" for="file-multiple-input">Multiple File input</label>
-                    <div class="col-md-9">
-                        <input type="file" id="file-multiple-input" accept="image/gif, image/jpeg, image/png" name="files[]" multiple="multiple">
-                    </div>
-                </div>
+                <div id="fine-uploader-manual-trigger"></div>
+                
             </form>
         </div>
         <div class="card-footer">
@@ -95,41 +94,39 @@ span>i {
     width: 20px;
     cursor: pointer;
 }
+  #trigger-upload {
+            color: white;
+            background-color: #00ABC7;
+            font-size: 14px;
+            padding: 7px 20px;
+            background-image: none;
+        }
+
+        #fine-uploader-manual-trigger .qq-upload-button {
+            margin-right: 15px;
+        }
+
+        #fine-uploader-manual-trigger .buttons {
+            width: 36%;
+        }
+
+        #fine-uploader-manual-trigger .qq-uploader .qq-total-progress-bar-container {
+            width: 60%;
+        }
 </style>
-@endsection @section('script')
+@endsection 
+@section('script')
+
+    
 <script type="text/javascript">
 $('.fa-trash-o').click(function(e) {
     e.preventDefault();
     var id = $(this).attr('post_id');
     $.get('/posts/delete/' + id, function() {
         $('#' + id).remove();
-        $('.row').css("height", "auto");
     });
 });
 
-$('#post_submit').click(function(e) {
-    e.preventDefault();
-    var data = new FormData();
-    data.append('file[]', $('#file-multiple-input')[0].files);
-    data.append('_token', '{{ csrf_token() }}');
-    data.append('title', $('#title').val());
-    data.append('content', $('#content').val());
-    data.append('publisher', $('#publisher').val());
 
-    var files = $('#file-multiple-input')[0].files;
-    var filearrray = [];
-    for (var i = files.length - 1; i >= 0; i--) {
-        filearrray.push(files[i]);
-    }
-    console.log(filearrray);
-    $.post('/post&photos/insert', {
-        _token: '{{ csrf_token() }}',
-        title: $('#title').val(),
-        content: $('#content').val(),
-        publisher: $('#publisher').val(),
-        'ary[]': filearrray
-    });
-    // $.post('/post&photos/insert', data);
-});
 </script>
 @endsection

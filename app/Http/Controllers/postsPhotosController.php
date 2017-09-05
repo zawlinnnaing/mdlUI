@@ -26,29 +26,25 @@ class postsPhotosController extends Controller
 
   public function  insert(Request $request){
     // $this->validate($request);
-    // $file = $request->file;
-    // $file->move('uploads',$file->getClientOriginalName());
-    // Photos::create([
-    //             'img_dir' => $file->getClientOriginalName(),
-    //             'name' => $request->name,
-    //             'post_id' => $request->post_id
-    //         ]);
+    $file = $request->qqfile;
+    $file->move('uploads',$file->getClientOriginalName());
+    $photo = Photos::create([
+                'img_dir' => $file->getClientOriginalName(),
+                'name' => $file->getClientOriginalName(),
+            ]);
+    return response()->json(["success"=>true, 'photo_id'=>$photo->id, 'uuid'=>$request->qquuid]);
+  }
 
-    $post = Post::create([
-                'title' => $request->title,
-                'content' => $request->content,
-                'publisher' => $request->publisher
-            ]);
-    foreach ($request->ary as $img) {
-            $img->move('uploads',$img->getClientOriginalName());
-            Photos::create([
-                'img_dir' => $img->getClientOriginalName(),
-                'name' => $img->getClientOriginalName(),
-                'post_id' => 3
-            ]);
-        }
-    Session::flash('success_msg','Photo added Successfully');
-    return redirect()->route('photos.index');
+  public function insertboth(Request $request){
+      $post = Post::create([
+          'title' => $request->title,
+          'content' => $request->content,
+          'publisher' => $request->publisher
+        ]);
+      foreach ($request->ary as $key) {
+        Photos::find($key)->update(['post_id'=>$post->id]);
+      }
+      return response()->json(["success"=>true]);
   }
 
   public function edit($id){
@@ -67,9 +63,8 @@ class postsPhotosController extends Controller
     return redirect()->route('photos.index');
   }
 
-  public function delete($id){
-    Photos::find($id)->delete();
-    Session::flash('success_msg','Photo delected successfully');
-    return redirect()->route('photos.index');
+  public function delete(Request $request){
+    Photos::find($request->photo_id)->delete();
+    return response()->json(["success"=>true]);
   }
 }
