@@ -37,10 +37,11 @@
             </div>
             <div class="customized-section">
                 <div class="customized-section-text">
-                    <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Recently Published Announcements</div>
+                    <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast announce-content" data-anijs="if: scroll, on: window, do: fadeIn animated, before: $scrollReveal">Recently Published Announcements</div>
                     @foreach($announcements as $announcement)
-                        <p class="mdl-typography--font-light">
+                        <p data-anijs="if: scroll, on: window, do: rollIn animated, before: $scrollReveal repeat" class="mdl-typography--font-light">
                             {{ $announcement->content }}
+                            </p>
                             <hr>
                     @endforeach
                 </div>
@@ -71,4 +72,4 @@
                     @endforeach
                 </div>
             </div>
-        @endsection
+        @endsection 
