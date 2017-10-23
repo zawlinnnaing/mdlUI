@@ -1,4 +1,5 @@
-@extends('layout') @section('content')
+@extends('layout')
+ @section('content')
 <div class="column is-12" style="background-color: white !important; padding: 0 !important">
     <div class="tile is-ancestor is-parent" style="margin: 0 auto;">
         <div class="tile is-2" style="padding: 7px; padding-right: 0; background-color: white; 

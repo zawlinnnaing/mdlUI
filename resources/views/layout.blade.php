@@ -14,11 +14,7 @@
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
      <link rel="stylesheet" type="text/css" href="{{asset('css/bulma.css')}}">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> -->
 
-    <!--<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> -->
-
-   
     <style>
     #title{
         color: grey;
@@ -37,7 +33,7 @@
 </head>
 
 <body>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <div class="header mdl-layout__header mdl-layout__header--waterfall">
             <div class="mdl-layout__header-row">
             <a  id="title" class="mdl-layout-title" href="/">
@@ -53,11 +49,6 @@
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/academic">Acedamic Plan</a>
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/research">Research</a>
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/postList">Activities</a>
-<<<<<<< HEAD
-                        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/research">Research</a>
-=======
-                        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Alumini</a>
->>>>>>> cff7ca6fd2b7ef572a3020f5615154bd9a8590d2
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/about">About</a>
                     </nav>
                 </div>
@@ -147,16 +138,8 @@
    <!-- <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.min.js"></script>
- <!-- AniJS core library -->
-  <script src="https://anijs.github.io/lib/anijs/anijs-min.js"></script> 
-  
-  <!-- Include to use $addClass, $toggleClass or $removeClass -->
-  <script src="https://anijs.github.io/lib/anijs/helpers/dom/anijs-helper-dom-min.js"></script>
-
-  <!--The scrollreveal helper -->
-  <script src="https://anijs.github.io/lib/anijs/helpers/scrollreveal/anijs-helper-scrollreveal-min.js"></script>
-
-          @yield('scrtag')
+      <script src= "{{ asset('bower_components/scrollreveal/dist/scrollreveal.min.js') }}"></script>
+     @yield('scrtag')
 </body>
 
 </html>

@@ -37,12 +37,14 @@
             </div>
             <div class="customized-section">
                 <div class="customized-section-text">
-                    <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast announce-content" data-anijs="if: scroll, on: window, do: fadeIn animated, before: $scrollReveal">Recently Published Announcements</div>
+                    <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Recently Published Announcements</div>
                     @foreach($announcements as $announcement)
-                        <p data-anijs="if: scroll, on: window, do: rollIn animated, before: $scrollReveal repeat" class="mdl-typography--font-light">
+                    <div>
+                        <p class="mdl-typography--font-light">
                             {{ $announcement->content }}
                             </p>
                             <hr>
+                     </div>
                     @endforeach
                 </div>
             </div>
@@ -72,4 +74,17 @@
                     @endforeach
                 </div>
             </div>
-        @endsection 
+          @endsection 
+          @section('scrtag')
+          <script type="text/javascript">
+              window.sr = ScrollReveal();
+              sr.reveal('.ann', {duration: 1000}, 50);
+          </script>
+          @endsection
+          @section('style')
+          <style type="text/css">
+          .mdl-card:hover{
+            box-shadow :5px 5px 5px #888888;
+          }
+          </style>
+          @endsection

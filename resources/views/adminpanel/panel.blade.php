@@ -35,55 +35,13 @@
                         {{implode(' ', array_slice(str_word_count($announcement->content, 2), 0, 40))}}.....
                     </div>
                 </div>
-<<<<<<< HEAD
             </div>
             @endforeach
         </div>
     </div>
-=======
-                <div class="card col-md-9" id="post_form" style="display: none;">
-                                <div class="card-body">
-                                    <form action="" method="post" id="post_form_data" enctype="multipart/form-data" class="form-horizontal">
-                                        <div class="form-group row">
-                                            <label class="col-md-3 form-control-label" for="text-input">Title</label>
-                                            <div class="col-md-9">
-                                                <input type="text" id="title" name="title" class="form-control" placeholder="Text">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-md-3 form-control-label" for="textarea-input">Textarea</label>
-                                            <div class="col-md-9">
-                                                <textarea id="content" name="content" rows="9" class="form-control" placeholder="Content.."></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-md-3 form-control-label" for="text-input">Publisher</label>
-                                            <div class="col-md-9">
-                                                <input type="text" id="publisher" name="publisher" class="form-control" placeholder="Text">
-                                            </div>
-                                        </div>
-                                         <div class="form-group row">
-                                            <label class="col-md-3 form-control-label" for="file-multiple-input">Multiple File input</label>
-                                            <div class="col-md-9">
-                                                <input type="file" id="file-multiple-input" name="file[]" multiple>
-                                            </div>
-                                        </div> 
-                                        <div class="form-group row">
-                                            <label class="col-md-3 form-control-label" for="text-input">Photo Name</label>
-                                            <div class="col-md-9">
-                                                <input type="text" id="photoName" name="name" class="form-control" placeholder="Text">
-                                            </div>
-                                        </div>
 
+               
 
-                                                                            </form>
-                                </div>
-                                <div class="card-footer">
-                                    <button type="submit" id="post_submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
-                                    <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
-                                </div>
-                            </div>
->>>>>>> cff7ca6fd2b7ef572a3020f5615154bd9a8590d2
 
     <div class="card col-md-9" id="posts_form" style="display: none;">
         <div class="card-body">
@@ -116,6 +74,7 @@
             <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
         </div>
     </div>
+
         <div class="card col-md-9" id="announcements_form" style="display: none;">
             <div class="card-body">
                 <form action="" method="post" id="post_form_data" name="post_form_data" enctype="multipart/form-data" class="form-horizontal">
@@ -133,6 +92,7 @@
                 <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
             </div>
         </div>
+
 </div>
 <style type="text/css">
 span>i {
@@ -151,7 +111,6 @@ span>i {
             margin-right: 15px;
         }
 
-<<<<<<< HEAD
         #fine-uploader-manual-trigger .buttons {
             width: 36%;
         }
@@ -161,9 +120,7 @@ span>i {
         }
 </style>
 @endsection 
-@section('script')
-
-    
+@section('script')  
 <script type="text/javascript">
 $('.fa-trash-o').click(function(e) {
     e.preventDefault();
@@ -172,29 +129,5 @@ $('.fa-trash-o').click(function(e) {
         $('#' + id).remove();
     });
 });
-
-=======
-@section('script')
-            
-             var id = $(this).attr('post_id');
-                $('.fa-trash-o').click(function(e){
-                    e.preventDefault();
-                    //var id = $(this).attr('post_id');
-                    $.get('/posts/delete/'+id,function(){
-                        $('#'+id).remove();
-                        $('.row').css("height", "auto");
-                    });
-                });
-
-                $('#post_submit').click(function(e){
-                    e.preventDefault();
-                    var files = $('input[type=file]').files;
-                    $.post('/posts/insert',{ _token: '{{ csrf_token() }}',title : $('#title').val() , content: $('#content').val() , publisher: $('#publisher').val() });
-                    $.post('photos/insert',{ _token: '{{csrf_token()}}',name : $('#photoName').val(), post_id: id , file: files});
-                    console.log( $('#title').val() );
-                });
-@endsection
->>>>>>> cff7ca6fd2b7ef572a3020f5615154bd9a8590d2
-
 </script>
 @endsection

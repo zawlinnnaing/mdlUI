@@ -6,3 +6,4 @@ $('.departments-toggle>img').click(function(){
 	$('.departments-toggle>img').toggleClass('hide')
 });
 
+

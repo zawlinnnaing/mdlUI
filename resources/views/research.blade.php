@@ -1,12 +1,7 @@
 @extends('layout')
 
 @section('content')
-<<<<<<< HEAD
 <div class="container is-hidden-mobile is-10" style="margin-top: 3rem !important">
-=======
-<div class="container is-hidden-mobile" style="margin-top: 3rem !important">
->>>>>>> cff7ca6fd2b7ef572a3020f5615154bd9a8590d2
-
 <h1 style="padding-left: 40px !important; color: grey">Researches</h1>
 
 <div class="dept">
